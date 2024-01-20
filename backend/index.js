@@ -6,7 +6,9 @@ const app = express()
 const port = 5000
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin:"https://notes-8dn83taj8-yash-baghelas-projects.vercel.app"
+}))
 
 //available routes
 app.use('/api/auth', require('./routes/auth'))
