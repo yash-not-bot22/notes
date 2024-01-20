@@ -17,7 +17,7 @@ function Setnote(props) {
 
   const getnotes=async()=> {
    
-    const response = await fetch("/api/notes/fetchallnotes", {
+    const response = await fetch("https://notes-edsy59zno-yash-baghelas-projects.vercel.app/api/notes/fetchallnotes", {
       method: "GET", 
       
       headers: {
@@ -39,7 +39,7 @@ function Setnote(props) {
   
   const addNote=async(title,description,tag)=>{
 
-    const response = await fetch(`/api/notes/addnote`, {
+    const response = await fetch(`https://notes-edsy59zno-yash-baghelas-projects.vercel.app/api/notes/addnote`, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         
         headers: {
@@ -67,7 +67,7 @@ function Setnote(props) {
 
   //delete a note
   const deletenote=async(id)=>{
-    const res=  await fetch(`/api/notes/deletenote/${id}`,{
+    const res=  await fetch(`https://notes-edsy59zno-yash-baghelas-projects.vercel.app/api/notes/deletenote/${id}`,{
       method: "DELETE",
       headers:{
         "auth-token": localStorage.getItem('token'),
@@ -81,9 +81,9 @@ function Setnote(props) {
   }
   //edit a note
   const editnote= async(title,description,tag,id)=>{
-    //api call
     
-      const response = await fetch(`/api/notes/updatenote/${id}`, {
+    
+      const response = await fetch(`https://notes-edsy59zno-yash-baghelas-projects.vercel.app/api/notes/updatenote/${id}`, {
         method: "PUT", // *GET, POST, PUT, DELETE, etc.
         
         headers: {
