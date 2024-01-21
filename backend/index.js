@@ -11,8 +11,8 @@ app.use(cors())
 //available routes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
-app.get("/",(r,re)=>{
-  re.send("server running")
+app.get("/",(r,res)=>{
+  res.send("server running")
 })
 
 
