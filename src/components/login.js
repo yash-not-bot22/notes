@@ -24,7 +24,7 @@ const Login = (props) => {
         
         headers: {
           "Content-Type": "application/json",
-          'Access-Control-Allow-Origin': 'https://notes-8dn83taj8-yash-baghelas-projects.vercel.app',
+          'Access-Control-Allow-Origin': 'https://notes-zeta-six.vercel.app/',
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
        
