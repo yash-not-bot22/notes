@@ -7,7 +7,7 @@ const port = 5000
 
 app.use(express.json())
 app.use(cors({
-  origin:"https://notes-zeta-six.vercel.app"
+  origin:"https://notes-zeta-six.vercel.app/login"
 }))
 
 //available routes
