@@ -14,7 +14,7 @@ const Signup = (props) => {
 
     const handleclick=async(e)=>{
         e.preventDefault();
-        const response = await fetch(`https://notes-edsy59zno-yash-baghelas-projects.vercel.app/api/auth/createuser`, {
+        const response = await fetch(`https://notes-api-kappa.vercel.app/api/auth/createuser`, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         
         headers: {

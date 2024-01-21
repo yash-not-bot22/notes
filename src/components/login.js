@@ -19,7 +19,7 @@ const Login = (props) => {
       
 
       const loginuserapi=async(userdet)=>{
-        const response = await fetch(`https://notes-edsy59zno-yash-baghelas-projects.vercel.app/api/auth/login`, {
+        const response = await fetch(`https://notes-api-kappa.vercel.app/api/auth/login`, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         
         headers: {
