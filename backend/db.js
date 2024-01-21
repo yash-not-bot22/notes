@@ -3,17 +3,19 @@
 const mongoose = require('mongoose');
 require("dotenv").config();
 
- connectToMongoose();
+ 
 
 
-async function connectToMongoose() {
-  try{await mongoose.connect("mongodb+srv://yashbaghel:1234yashyashB@cluster0.7x2ongh.mongodb.net/?retryWrites=true&w=majority");
-  console.log('database connected')}catch(e){
-    console.log(e);
-  }
-  //if not coonecting in atlas jus delete the ip and re enter it
+//if not coonecting in atlas jus delete the ip and re enter it
 
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
+  const connectToMongoose = async () => {
+    await mongoose.connect(process.env.REACT_APP_MONGO_URL);
+    console.log("Connected to myDB");
+  }
+  connectToMongoose().catch((err) => console.error(err));
+  
+  
+  
 
 module.exports = connectToMongoose;
